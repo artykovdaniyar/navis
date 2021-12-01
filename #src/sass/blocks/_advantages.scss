@@ -1,0 +1,88 @@
+.advantages {
+	text-align: center;
+	padding: 55px 0 80px;
+	&__title {
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 50px;
+	}
+
+	&__list {
+		display: flex;
+		align-items: flex-start;
+		justify-content: center;
+		margin-top: 45px;
+		text-align: left;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		padding: 0 15px;
+		margin-bottom: 60px;
+		width: 370px;
+	}
+	&__item:hover &__icon-wrapper {
+		animation: rotateIcon 0.5s linear;
+		background: $lg-2-reverse-color;
+	}
+
+	&__icon-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 70px;
+		height: 70px;
+		background: $light-blue-color;
+		border-radius: 50%;
+		transition: all 0.5s linear;
+	}
+
+	&__icon {
+	}
+
+	&__name {
+		margin-top: 22px;
+		font-weight: 700;
+		font-size: 20px;
+		line-height: 25px;
+	}
+
+	&__descr {
+		margin-top: 12px;
+		line-height: 24px;
+	}
+}
+
+@keyframes rotateIcon {
+	from {
+		transform: rotateY(0);
+	}
+	to {
+		transform: rotateY(360deg);
+	}
+}
+
+@media (max-width: 768px) {
+	.advantages {
+		&__title {
+			font-size: 22px;
+			line-height: 29px;
+		}
+		&__item {
+			text-align: center;
+		}
+		&__icon-wrapper {
+			margin: 0 auto;
+		}
+		&__name {
+			margin-top: 20px;
+			font-weight: 700;
+			font-size: 16px;
+		}
+		&__descr {
+			margin-top: 12px;
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+}

@@ -1,0 +1,16 @@
+.course {
+	&__promo {
+		padding-top: 50px;
+		text-align: left;
+		.page__container {
+			flex-direction: column;
+			justify-content: flex-start;
+			align-items: flex-start;
+		}
+	}
+	&__promo-btn {
+		margin-top: 0;
+	}
+}
+@media (max-width: 768px) {
+}

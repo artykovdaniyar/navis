@@ -1,0 +1,156 @@
+.header {
+	color: #fff;
+	width: 100%;
+	min-height: 820px;
+	background: $black-color;
+	background-image: url(../img/promo-bg.webp);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	&--course {
+		background-image: url(../img/course-header-bg.webp);
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+		min-height: 380px;
+	}
+
+	&__header {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		padding: 12px 0;
+		border-bottom: 1px solid #ffffff28;
+		animation: navToDown 1s linear 1s;
+		animation-fill-mode: backwards;
+	}
+	&__link {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__logo-text {
+		font-size: 50px;
+		font-weight: 800;
+	}
+
+	&__slogan {
+		margin-top: 10px;
+		color: $light-blue-color;
+	}
+
+	&__tel-container {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	&__tel-wrapper {
+		display: flex;
+		align-items: flex-end;
+		flex-direction: column;
+	}
+
+	&__tel-text {
+		position: relative;
+	}
+	&__tel-lighter {
+		position: absolute;
+		top: 50%;
+		left: -17px;
+		width: 6px;
+		height: 6px;
+		border-radius: 50%;
+		transform: translate(-50%, -50%);
+	}
+	&__tel-lighter--green {
+		background: $light-blue-color;
+		box-shadow: 0px 0px 4px rgba(39, 209, 206, 0.5);
+	}
+	&__tel-lighter--red {
+		background: red;
+		box-shadow: 0px 0px 4px rgba(209, 39, 39, 0.37);
+	}
+
+	&__tel-number {
+		position: relative;
+		font-weight: 700;
+		font-size: 24px;
+		line-height: 29px;
+		text-transform: uppercase;
+		margin-top: 5px;
+		transition: text-decoration 0.5s;
+		letter-spacing: 2.5px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	&__tel-icon {
+		position: absolute;
+		top: 50%;
+		left: -17px;
+		transform: translate(-50%, -50%);
+	}
+	&__tel-btn {
+		margin-left: 40px;
+		padding: 23px 46px;
+		background: #27d1ce;
+		border-radius: 6px;
+		font-style: normal;
+		font-weight: 700;
+		line-height: 21px;
+		letter-spacing: 0.05em;
+		text-transform: uppercase;
+		transition: all 0.3s;
+
+		&:hover {
+			background: rgba(10, 199, 196, 0.705);
+		}
+	}
+}
+@keyframes navToDown {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+@media (max-width: 850px) {
+	.header {
+		min-height: auto;
+		&__logo {
+			width: 118px;
+			height: 36px;
+		}
+		&__slogan {
+			margin-top: 8px;
+			font-size: 10px;
+		}
+		&__tel-text {
+			font-size: 10px;
+			line-height: 12px;
+		}
+
+		&__tel-number {
+			font-size: 16px;
+			letter-spacing: 1.4px;
+			line-height: 19px;
+		}
+
+		&__tel-btn {
+			display: none;
+		}
+	}
+}
+@media (max-width: 320px) {
+	.header {
+		&__header {
+			flex-direction: column;
+		}
+
+		&__tel-wrapper {
+			display: none;
+		}
+	}
+}

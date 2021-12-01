@@ -1,0 +1,39 @@
+.ticker {
+	&__wrapper {
+		font-family: "RoadRadio";
+		padding: 7px 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: nowrap;
+		background: $lg-3-color;
+		overflow: hidden;
+	}
+
+	&__item {
+		display: flex;
+		flex-wrap: nowrap;
+		flex-basis: calc(100% / 5);
+		animation: toRight 5s infinite linear;
+	}
+
+	&__text {
+		white-space: nowrap;
+		font-size: 20px;
+	}
+
+	&__divider {
+		font-size: 20px;
+		padding: 0 83px;
+	}
+}
+
+@keyframes toRight {
+	0% {
+		transform: translateX(0%);
+	}
+
+	100% {
+		transform: translateX(100%);
+	}
+}

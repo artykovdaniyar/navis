@@ -1,0 +1,70 @@
+.details {
+	padding: 55px 0;
+	text-align: center;
+	&__title {
+		font-size: 40px;
+	}
+
+	&__subtitle {
+		font-family: "Gilroy";
+		margin-top: 10px;
+		text-transform: none;
+		font-weight: 400;
+		font-size: 20px;
+		line-height: 30px;
+	}
+
+	&__list {
+		margin-top: 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+	}
+
+	&__item {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin-top: 20px;
+		margin-right: 20px;
+	}
+
+	&__icon-wrapper {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		background: #1f232e;
+		margin-right: 20px;
+	}
+
+	&__icon {
+	}
+
+	&__descr {
+		text-align: left;
+	}
+
+	&__descr-name {
+	}
+
+	&__descr-info {
+		font-family: "RoadRadio";
+		font-size: 26px;
+		color: $light-blue-color;
+	}
+}
+@media (max-width: 768px) {
+	.details {
+		&__title {
+			font-size: 30px;
+		}
+		&__subtitle {
+			font-size: 16px;
+			line-height: 25px;
+		}
+	}
+}

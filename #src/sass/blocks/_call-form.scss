@@ -1,0 +1,185 @@
+.call-form {
+	position: relative;
+	&__back {
+		position: absolute;
+		top: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		width: 100%;
+		height: 100%;
+		padding: 30px 26px 30px;
+		background: $light-blue-color;
+		text-align: center;
+		border-radius: 6px;
+		backface-visibility: hidden;
+		overflow: hidden;
+		transition: transform 0.5s linear;
+		transform: perspective(900px) rotateY(180deg);
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			clip-path: polygon(0 40%, 0% 100%, 30% 100%);
+			background: rgba($color: #fff, $alpha: 0.5);
+		}
+		&::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			display: block;
+			clip-path: polygon(100% 40%, 70% 100%, 100% 100%);
+			background: rgba($color: #fff, $alpha: 0.5);
+		}
+	}
+	&__back-title {
+		font-size: 25px;
+		line-height: 25px;
+		animation-name: moveInLeft;
+		animation-duration: 1s;
+		animation-timing-function: ease-out;
+	}
+
+	&__back-subtitle {
+		margin-top: 22px;
+		font-size: 18px;
+	}
+
+	&__back-icon-wrapper {
+		margin-top: 22px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 170px;
+		height: 170px;
+		background: transparent;
+		border: 5px solid #fff;
+		border-radius: 50%;
+	}
+
+	&__back-icon {
+		fill: #fff;
+		width: 130px;
+		height: 130px;
+	}
+
+	&__back-text {
+		font-weight: 500;
+		font-size: 20px;
+		margin-top: 22px;
+	}
+	&__front {
+		position: relative;
+		width: 100%;
+		height: 100%;
+		padding: 30px 26px 30px;
+		background: $lg-2-color;
+		text-align: center;
+		border-radius: 6px;
+		backface-visibility: hidden;
+		overflow: hidden;
+		transform: perspective(900px) rotateY(0deg);
+		transition: transform 0.5s linear;
+	}
+	&__front-title {
+		font-size: 25px;
+		line-height: 25px;
+	}
+
+	&__front-text {
+		display: block;
+		margin-top: 20px;
+	}
+
+	&__front-input {
+		display: block;
+		text-align: center;
+		width: 100%;
+		height: 75px;
+		border: none;
+		border-radius: 10px;
+		background: #ffffff;
+		box-shadow: inset 0px 4px 11px rgba(0, 0, 0, 0.25);
+		margin-bottom: 10px;
+		transition: all 0.3s;
+		font-size: 18px;
+		line-height: 21px;
+		&::placeholder {
+			color: #bcbcbc;
+		}
+		&:focus {
+			outline: 3px solid $light-blue-color;
+			box-shadow: none;
+		}
+	}
+	&__front-name {
+		margin-top: 40px;
+	}
+	&__front-btn {
+		width: 100%;
+		height: 75px;
+		background: $light-blue-color;
+		border-radius: 10px;
+		font-family: RoadRadio;
+		font-weight: 700;
+		font-size: 18px;
+		letter-spacing: 0.095em;
+		text-transform: uppercase;
+	}
+
+	&.active &__front {
+		transform: perspective(900px) rotateY(-180deg);
+	}
+	&.active &__back {
+		transform: perspective(900px) rotateY(0deg);
+	}
+}
+
+.call-form {
+	&__back {
+	}
+
+	&__back-title {
+	}
+
+	&__back-subtitle {
+	}
+
+	&__back-icon-wrapper {
+	}
+
+	&__back-icon {
+	}
+
+	&__back-text {
+	}
+
+	&__front {
+	}
+
+	&__front-title {
+	}
+
+	&__front-text {
+	}
+
+	&__front-input {
+	}
+
+	&__front-name {
+	}
+
+	&__front-phone {
+	}
+
+	&__front-btn {
+	}
+}

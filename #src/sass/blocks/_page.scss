@@ -1,0 +1,35 @@
+.page {
+	&__container {
+		width: 1170px;
+		margin: 0 auto;
+	}
+	&__gradient-text {
+		text-transform: uppercase;
+		background: linear-gradient(135deg, #5335cf 0%, #de005e 25%, #49dd24 50%, #de055e 75%, #5335cf 100%);
+		background-size: 400%;
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+		animation: animate 15s linear infinite;
+		outline: none;
+	}
+}
+@media (max-width: 1171px) {
+	.page {
+		&__container {
+			width: 90%;
+		}
+	}
+}
+@media (max-width: 480px) {
+	.page {
+		&__container {
+			padding-left: 15px;
+			padding-right: 15px;
+		}
+	}
+}
+@keyframes animate {
+	100% {
+		background-position: 400%;
+	}
+}
